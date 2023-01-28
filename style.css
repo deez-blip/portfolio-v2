@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,300&display=swap');
 
 :root {
-    --yellow: #f9ca24
+    --yellow: #f9ca24;
+    --gradient: linear-gradient(to top, #c471f5 0%, #fa71cd 100%)
 }
 
 * {
@@ -17,7 +18,7 @@
 }
 
 *::selection {
-    background:var(--yellow);
+    background:var(--gradient);
     color: #333;
 }
 
@@ -35,7 +36,7 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-    background: var(--yellow);
+    background: var(--gradient);
 }
 
 body{
@@ -70,12 +71,16 @@ header {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
-    border: .7rem solid var(--yellow);
+    border-style: solid;
+    border-width: 10px;
+    border-image: linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66)) 1;
+  
 }
 
 .user .name {
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: #fff;
+    padding: 0 0.5rem;
 }
 
 .user .post {
@@ -103,7 +108,7 @@ header {
 }
 
 .navbar ul li a:hover{
-    background: var(--yellow);
+    background: var(--gradient);
 }
 
 /* Menu section start */
@@ -141,7 +146,9 @@ header {
 }
 
 .home h1 span {
-    color: var(--yellow);
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .home p {
@@ -166,7 +173,7 @@ header {
 }
 
 .btn:hover {
-    background-color: var(--yellow);
+    background: var(--gradient);
 }
 
 /* About section start */
@@ -180,7 +187,9 @@ header {
 }
 
 .heading span {
-    color: var(--yellow);
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   
 }
 
 .about .row{
@@ -198,15 +207,18 @@ header {
 }
 
 .about .row .info h3{
+    color: #eee;
+    padding: 2rem;
     font-size: 2rem;
-    color: var(--yellow);
-    padding: 1rem 0;
-    font-weight: normal;
 }
 
 .about .row .info h3 span {
-    color: #eee;
-    padding: 0 .5rem;
+    font-size: 2rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 1rem 0;
+    font-weight: normal;
 }
 
 .about .row .counter{
@@ -226,7 +238,9 @@ header {
 
 .about .row .counter .box span{
     font-size: 4rem;
-    color: var(--yellow);
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .about .row .counter .box h3{
@@ -234,19 +248,54 @@ header {
     color: #fff;
 }
 
+/* Skills section start */
+
+.skills .skills-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.skills .skills-container .skill {
+    height: 18rem;
+    width: 24rem;
+    border-radius: 1rem;
+    margin: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    color: #eee;
+}
+
+.skills .skills-container .skill p{
+    font-size: 2rem;
+}
+
+.skills .skills-container .skill img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* .skills .skills-container .skill:hover img {
+    transform: scale(1.2);
+} */
+
 /* Portfolio section start */
 
 .portfolio .box-container{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     padding: 2rem 0;
 }
 
 .portfolio .box-container .box {
-    height: 20rem;
-    width: 26rem;
+    height: 26rem;
+    width: 38rem;
     border-radius: 1rem;
     margin: 2rem;
     overflow: hidden;
@@ -266,10 +315,15 @@ header {
 /* scroll top */
 .top {
     position: fixed;
-    bottom: 7.5rem;
-    right: 2rem;
+    bottom: 5rem;
+    right: 1rem;
     z-index: 100;
     display: none;
+}
+
+.top img {
+    width: 50%;
+    height: 50%;
 }
 
 
