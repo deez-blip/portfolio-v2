@@ -68,12 +68,13 @@ header {
 .user img {
     height: 17rem;
     width: 17rem;
-    border-radius: 50%;
+    border-radius: 150px;
+    background: linear-gradient(45deg, #F48ACE 0%, #493A97 100%);
     object-fit: cover;
     margin-bottom: 1rem;
-    border-style: solid;
+    /* border-style: solid;
     border-width: 10px;
-    border-image: linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66)) 1;
+    border-image: linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66)) 1; */
   
 }
 
@@ -308,8 +309,15 @@ header {
     object-fit: cover;
 }
 
+.portfolio .box-container .box h3 {
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
 .portfolio .box-container .box:hover img {
-    transform: scale(1.2);
+    
 }
 
 /* scroll top */
@@ -385,6 +393,10 @@ header {
     }
 
     .portfolio .box-container .box {
+        width: 100%;
+    }
+
+    .skills .skills-container .skill {
         width: 100%;
     }
 }
